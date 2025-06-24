@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int odd=0;
+        int even=0;
+		for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        Set<Integer> s=new HashSet<>();
+        int i=0;
+        while(i<n)
+        {
+            if(s.contains(arr[i]))
+            {
+                s.remove(arr[i]);
+            }
+            else
+            {
+                s.add(arr[i]);
+            }
+            i++;
+        }
+        for(int num:s)
+        {
+            System.out.print(num+" ");
+        }
+        sc.close();
+	}
+}
